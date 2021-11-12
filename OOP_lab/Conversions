@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class convertion{
+    public static void main(String[]args) {
+        int num;
+        double d;
+        char c;
+        Scanner r=new Scanner(System.in);
+        System.out.print("enter an integer,doble int and a character\n");
+        num=r.nextInt();
+        d=r.nextDouble();
+        c=r.next().charAt(0);
+        System.out.println("entered integer:"+num);
+        System.out.println("entered double:"+d);
+        System.out.println("entered character:"+c);
+        byte b=(byte)num;
+        System.out.println("int converted to byte:"+b);
+        int i=(int)d;
+        System.out.println("double converted to intger:"+i);
+        byte b1=(byte)d;
+        System.out.println("double converted to byte:"+b1);
+        int j=(int)c;
+        System.out.println("character converted to integer:"+j);
+        
+    }
