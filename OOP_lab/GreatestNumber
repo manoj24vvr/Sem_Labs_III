@@ -1,0 +1,36 @@
+import java.util.Scanner;
+class Compute{
+    int greatest,num2,num3;
+    public Compute(int a , int b, int c) {
+        greatest=a;
+        num2=b;
+        num3=c;
+    }
+
+    public void display(){
+        if (num2 > greatest){
+            greatest = num2;
+        }
+        if(num3 > greatest){
+            greatest = num3;
+        }
+
+        System.out.println("The Greates Among the given three : "+greatest); 
+    }
+
+
+}
+public class Greatest {
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        int Num1 = in.nextInt();
+        int Num2 = in.nextInt();
+        int Num3 = in.nextInt();
+
+        Compute gr = new Compute(Num1, Num2, Num3);
+        gr.display();
+
+        in.close();
+
+    }
+}
