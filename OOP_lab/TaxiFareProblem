@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class Car{
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the amount : ");
+        double amount = in.nextDouble();
+        double Distance;
+        
+        if (amount< 0 || amount >300){
+            System.out.println("Error , the sign and max value");
+        }
+        else if (amount >170 & amount <= 295) {
+            Distance = (amount-170)/5+20;
+            System.out.println(Distance);
+        }
+        else if (amount >50 ) {
+            Distance = (amount-50)/8+5;
+            System.out.println(Distance);
+        }
+        else if (amount <= 50 ) {
+            Distance = (amount)/10;
+            System.out.println(Distance);
+
+        }
+        
+        else{
+            System.out.println("check the amount once again. if coorect, tits out of range");
+        }
+
+        in.close();
+    }
+    
+}
