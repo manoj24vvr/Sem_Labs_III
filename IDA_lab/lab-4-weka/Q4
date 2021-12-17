@@ -1,0 +1,41 @@
+=== Run information ===
+
+Evaluator:    weka.attributeSelection.CfsSubsetEval -P 1 -E 1
+Search:       weka.attributeSelection.BestFirst -D 1 -N 5
+Relation:     Cereals-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.NumericToNominal-R12,13-weka.filters.unsupervised.attribute.Remove-R1-4,13-15
+Instances:    76
+Attributes:   9
+              protein
+              fat
+              sodium
+              fiber
+              carbo
+              sugars
+              potass
+              vitamins
+              rating
+Evaluation mode:    evaluate on all training data
+
+
+
+=== Attribute Selection on all input data ===
+
+Search Method:
+	Best first.
+	Start set: no attributes
+	Search direction: forward
+	Stale search after 5 node expansions
+	Total number of subsets evaluated: 42
+	Merit of best subset found:    0.915
+
+Attribute Subset Evaluator (supervised, Class (numeric): 9 rating):
+	CFS Subset Evaluator
+	Including locally predictive attributes
+
+Selected attributes: 2,3,4,6,8 : 5
+                     fat
+                     sodium
+                     fiber
+                     sugars
+                     vitamins
+

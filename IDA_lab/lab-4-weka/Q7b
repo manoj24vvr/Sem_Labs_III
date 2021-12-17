@@ -1,0 +1,77 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.Logistic -R 1.0E-8 -M -1 -num-decimal-places 4
+Relation:     Cereals-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.NumericToNominal-R12,13-weka.filters.unsupervised.attribute.Remove-R1-3,13-15-weka.filters.unsupervised.attribute.Remove-R1-weka.filters.unsupervised.attribute.Remove-R1,5,7-weka.filters.unsupervised.attribute.Discretize-B5-M-1.0-R6-precision6-unset-class-temporarily
+Instances:    76
+Attributes:   6
+              fat
+              sodium
+              fiber
+              sugars
+              vitamins
+              rating
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+Logistic Regression with ridge parameter of 1.0E-8
+Coefficients...
+                                  Class
+Variable             '(-inf-33.175263]'  '(33.175263-48.307675]'  '(48.307675-63.440088]'    '(63.440088-78.5725]'
+==================================================================================================================
+fat                            104.9673                  43.8472                  41.4685                  -62.715
+sodium                           2.6879                   0.4671                   0.4399                   1.5563
+fiber                          -91.6523                 -30.9854                 -28.3409                  17.1857
+sugars                          63.6132                    6.781                   5.2798                  11.7246
+vitamins=0                      58.1821                 -23.0299                  38.0009                 357.5565
+vitamins=25                    -37.6953                  19.1159                  74.7531                -182.1064
+vitamins=100                      2.544                   -9.677                -203.7099                 -86.7675
+Intercept                     -785.1465                 127.0493                  79.6229                -312.0376
+
+
+Odds Ratios...
+                                  Class
+Variable             '(-inf-33.175263]'  '(33.175263-48.307675]'  '(48.307675-63.440088]'    '(63.440088-78.5725]'
+==================================================================================================================
+fat                3.861256721288669E45     1.103089995248109E19    1.0221723925351753E18                        0
+sodium                          14.7015                   1.5953                   1.5526                   4.7414
+fiber                                 0                        0                        0            29084188.4124
+sugars             4.234905983551579E27                 880.9799                 196.3282              123574.9243
+vitamins=0        1.8541871777685273E25                        0    3.1883913968425504E16   1.9267111849268078E155
+vitamins=25                           0           200418198.2567    2.9164857890083222E32                        0
+vitamins=100                    12.7299                   0.0001                        0                        0
+
+
+Time taken to build model: 0.03 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          58               76.3158 %
+Incorrectly Classified Instances        18               23.6842 %
+Kappa statistic                          0.6615
+Mean absolute error                      0.097 
+Root mean squared error                  0.297 
+Relative absolute error                 35.0338 %
+Root relative squared error             80.1584 %
+Total Number of Instances               76     
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.900    0.071    0.818      0.900    0.857      0.805    0.971     0.873     '(-inf-33.175263]'
+                 0.727    0.116    0.828      0.727    0.774      0.623    0.831     0.790     '(33.175263-48.307675]'
+                 0.722    0.069    0.765      0.722    0.743      0.666    0.821     0.618     '(48.307675-63.440088]'
+                 0.750    0.069    0.375      0.750    0.500      0.495    0.929     0.290     '(63.440088-78.5725]'
+                 0.000    0.000    ?          0.000    ?          ?        0.173     0.016     '(78.5725-inf)'
+Weighted Avg.    0.763    0.089    ?          0.763    ?          ?        0.862     0.734     
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e   <-- classified as
+ 18  2  0  0  0 |  a = '(-inf-33.175263]'
+  4 24  3  2  0 |  b = '(33.175263-48.307675]'
+  0  3 13  2  0 |  c = '(48.307675-63.440088]'
+  0  0  1  3  0 |  d = '(63.440088-78.5725]'
+  0  0  0  1  0 |  e = '(78.5725-inf)'
+

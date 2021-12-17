@@ -1,0 +1,67 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.functions.LinearRegression -S 0 -R 1.0E-8 -additional-stats -num-decimal-places 4
+Relation:     Cereals-weka.filters.unsupervised.attribute.ReplaceMissingValues-weka.filters.unsupervised.attribute.NumericToNominal-R12,13-weka.filters.unsupervised.attribute.Remove-R1-4,13-15
+Instances:    76
+Attributes:   9
+              protein
+              fat
+              sodium
+              fiber
+              carbo
+              sugars
+              potass
+              vitamins
+              rating
+Test mode:    split 80.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+
+Linear Regression Model
+
+rating =
+
+      2.0148 * protein +
+     -3.7792 * fat +
+     -0.055  * sodium +
+      2.8422 * fiber +
+      0.1114 * carbo +
+     -1.7423 * sugars +
+     -0.0139 * potass +
+      3.8215 * vitamins=25,0 +
+     52.468 
+
+Regression Analysis:
+
+Variable          Coefficient     SE of Coef        t-Stat
+protein               2.0148         0.1915        10.5218
+fat                  -3.7792         0.1888       -20.0199
+sodium               -0.055          0.002        -26.9307
+fiber                 2.8422         0.2022        14.059 
+carbo                 0.1114         0.0636         1.7526
+sugars               -1.7423         0.0515       -33.8413
+potass               -0.0139         0.0067        -2.0668
+vitamins=25,0         3.8215         0.6069         6.2965
+const                52.468          1.4749        35.5732
+
+Degrees of freedom = 67
+R^2 value = 0.9913
+Adjusted R^2 = 0.99028
+F-statistic = 955.8286
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correlation coefficient                  0.9963
+Mean absolute error                      1.066 
+Root mean squared error                  1.3453
+Relative absolute error                 10.1473 %
+Root relative squared error             10.2022 %
+Total Number of Instances               15     
+
