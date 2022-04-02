@@ -1,0 +1,44 @@
+                                                    MovieLens Data 
+MovieLens data is taken from the (http://movielens.org) and it contains 100836 ratings and 3683 tag applications across 9742 movies.
+This data was created by 610 users.         
+Duration: Between March 29, 1996 and September 24, 2018.
+This file includes `links.csv`, `movies.csv`, `ratings.csv` and `tags.csv` files 
+Categories:
+
+movies.csv contains:
+1.Genre
+
+* Action
+* Adventure
+* Animation
+* Children's
+* Comedy
+* Crime
+* Documentary
+* Drama
+* Fantasy
+* Film-Noir
+* Horror
+* Musical
+* Mystery
+* Romance
+* Sci-Fi
+* Thriller
+* War
+* Western
+* (no genres listed)
+
+links.csv contains the fields:
+
+movieId,imdbId,tmdbId
+
+ratings.csv contains the fields:
+
+1.userId,movieId,rating,timestamp
+2.Ratings are made on a 5-star scale, with half-star increments (0.5 stars - 5.0 stars).
+
+Tags Data File Structure (tags.csv):
+
+contains the fields:
+
+userId,movieId,tag,timestamp
